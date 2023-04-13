@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGenerators.cs" />
     <Compile Include="Doctor\FormDoctorDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,10 +104,10 @@
     <Compile Include="FormDepartmentPanel.Designer.cs">
       <DependentUpon>FormDepartmentPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogins.cs">
+    <Compile Include="Login\FormLogins.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogins.Designer.cs">
+    <Compile Include="Login\FormLogins.Designer.cs">
       <DependentUpon>FormLogins.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctor\FormDoctorLogin.cs">
@@ -139,10 +140,10 @@
     <Compile Include="Patient\FormPatientRegister.Designer.cs">
       <DependentUpon>FormPatientRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSecretaryLogin.cs">
+    <Compile Include="Login\FormSecretaryLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSecretaryLogin.Designer.cs">
+    <Compile Include="Login\FormSecretaryLogin.Designer.cs">
       <DependentUpon>FormSecretaryLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -181,10 +182,10 @@
     <EmbeddedResource Include="FormDepartmentPanel.resx">
       <DependentUpon>FormDepartmentPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogins.resx">
+    <EmbeddedResource Include="Login\FormLogins.resx">
       <DependentUpon>FormLogins.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSecretaryLogin.resx">
+    <EmbeddedResource Include="Login\FormSecretaryLogin.resx">
       <DependentUpon>FormSecretaryLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FormPatientDetails.resx">

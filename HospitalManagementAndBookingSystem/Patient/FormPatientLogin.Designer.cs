@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BtPatientLogin = new System.Windows.Forms.Button();
-            this.MTbxPatientIdNumber = new System.Windows.Forms.MaskedTextBox();
-            this.TbxPatientPassword = new System.Windows.Forms.TextBox();
+            this.MTbxPatientLgnIdNumber = new System.Windows.Forms.MaskedTextBox();
+            this.TbxPatientLgnPassword = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -76,23 +76,24 @@
             this.BtPatientLogin.TabIndex = 3;
             this.BtPatientLogin.Text = "Login";
             this.BtPatientLogin.UseVisualStyleBackColor = true;
+            this.BtPatientLogin.Click += new System.EventHandler(this.BtPatientLogin_Click);
             // 
-            // MTbxPatientIdNumber
+            // MTbxPatientLgnIdNumber
             // 
-            this.MTbxPatientIdNumber.Location = new System.Drawing.Point(235, 99);
-            this.MTbxPatientIdNumber.Mask = "00000000000";
-            this.MTbxPatientIdNumber.Name = "MTbxPatientIdNumber";
-            this.MTbxPatientIdNumber.Size = new System.Drawing.Size(100, 20);
-            this.MTbxPatientIdNumber.TabIndex = 4;
-            this.MTbxPatientIdNumber.ValidatingType = typeof(int);
+            this.MTbxPatientLgnIdNumber.Location = new System.Drawing.Point(235, 99);
+            this.MTbxPatientLgnIdNumber.Mask = "00000000000";
+            this.MTbxPatientLgnIdNumber.Name = "MTbxPatientLgnIdNumber";
+            this.MTbxPatientLgnIdNumber.Size = new System.Drawing.Size(100, 20);
+            this.MTbxPatientLgnIdNumber.TabIndex = 1;
+            this.MTbxPatientLgnIdNumber.ValidatingType = typeof(int);
             // 
-            // TbxPatientPassword
+            // TbxPatientLgnPassword
             // 
-            this.TbxPatientPassword.Location = new System.Drawing.Point(235, 143);
-            this.TbxPatientPassword.Name = "TbxPatientPassword";
-            this.TbxPatientPassword.Size = new System.Drawing.Size(100, 20);
-            this.TbxPatientPassword.TabIndex = 5;
-            this.TbxPatientPassword.UseSystemPasswordChar = true;
+            this.TbxPatientLgnPassword.Location = new System.Drawing.Point(235, 143);
+            this.TbxPatientLgnPassword.Name = "TbxPatientLgnPassword";
+            this.TbxPatientLgnPassword.Size = new System.Drawing.Size(100, 20);
+            this.TbxPatientLgnPassword.TabIndex = 2;
+            this.TbxPatientLgnPassword.UseSystemPasswordChar = true;
             // 
             // linkLabel1
             // 
@@ -101,25 +102,27 @@
             this.linkLabel1.Location = new System.Drawing.Point(364, 191);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(77, 24);
-            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign Up";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FormPatientLogin
             // 
+            this.AcceptButton = this.BtPatientLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(540, 301);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.TbxPatientPassword);
-            this.Controls.Add(this.MTbxPatientIdNumber);
+            this.Controls.Add(this.TbxPatientLgnPassword);
+            this.Controls.Add(this.MTbxPatientLgnIdNumber);
             this.Controls.Add(this.BtPatientLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormPatientLogin";
-            this.Text = "FormPatientLogin";
+            this.Text = "Patient Login";
             this.Load += new System.EventHandler(this.FormPatientLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,8 +135,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtPatientLogin;
-        private System.Windows.Forms.MaskedTextBox MTbxPatientIdNumber;
-        private System.Windows.Forms.TextBox TbxPatientPassword;
+        private System.Windows.Forms.MaskedTextBox MTbxPatientLgnIdNumber;
+        private System.Windows.Forms.TextBox TbxPatientLgnPassword;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

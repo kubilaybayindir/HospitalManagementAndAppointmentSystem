@@ -10,7 +10,7 @@ namespace HospitalManagementAndAppointmentSystem
 {
     public class SQLConnectionCls
     {
-        public SqlConnection connect()
+        public SqlConnection ConnectDb()
         {
             SqlConnection sqlConnection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HospitalManagementDB;Integrated Security=True");
             sqlConnection.Open();

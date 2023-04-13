@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MTxtIdentityNumber = new System.Windows.Forms.MaskedTextBox();
+            this.MTxtPatientRegIdentityNumber = new System.Windows.Forms.MaskedTextBox();
             this.BtRegister = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtSurname = new System.Windows.Forms.TextBox();
+            this.TxtPatientRegSurname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtPatientRegPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtName = new System.Windows.Forms.TextBox();
+            this.TxtPatientRegName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.MTxtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.MTxtPatientRegPhone = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.CbxSex = new System.Windows.Forms.ComboBox();
+            this.CbxPatientRegSex = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // MTxtIdentityNumber
+            // MTxtPatientRegIdentityNumber
             // 
-            this.MTxtIdentityNumber.Location = new System.Drawing.Point(243, 121);
-            this.MTxtIdentityNumber.Mask = "00000000000";
-            this.MTxtIdentityNumber.Name = "MTxtIdentityNumber";
-            this.MTxtIdentityNumber.Size = new System.Drawing.Size(100, 20);
-            this.MTxtIdentityNumber.TabIndex = 9;
-            this.MTxtIdentityNumber.ValidatingType = typeof(int);
+            this.MTxtPatientRegIdentityNumber.Location = new System.Drawing.Point(243, 121);
+            this.MTxtPatientRegIdentityNumber.Mask = "00000000000";
+            this.MTxtPatientRegIdentityNumber.Name = "MTxtPatientRegIdentityNumber";
+            this.MTxtPatientRegIdentityNumber.Size = new System.Drawing.Size(100, 20);
+            this.MTxtPatientRegIdentityNumber.TabIndex = 3;
+            this.MTxtPatientRegIdentityNumber.ValidatingType = typeof(int);
             // 
             // BtRegister
             // 
@@ -60,9 +60,10 @@
             this.BtRegister.Location = new System.Drawing.Point(243, 252);
             this.BtRegister.Name = "BtRegister";
             this.BtRegister.Size = new System.Drawing.Size(100, 35);
-            this.BtRegister.TabIndex = 8;
+            this.BtRegister.TabIndex = 7;
             this.BtRegister.Text = "Register";
             this.BtRegister.UseVisualStyleBackColor = false;
+            this.BtRegister.Click += new System.EventHandler(this.BtRegister_Click);
             // 
             // label3
             // 
@@ -94,13 +95,12 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Patient Register Panel";
             // 
-            // TxtSurname
+            // TxtPatientRegSurname
             // 
-            this.TxtSurname.Location = new System.Drawing.Point(243, 92);
-            this.TxtSurname.Name = "TxtSurname";
-            this.TxtSurname.Size = new System.Drawing.Size(100, 20);
-            this.TxtSurname.TabIndex = 13;
-            this.TxtSurname.UseSystemPasswordChar = true;
+            this.TxtPatientRegSurname.Location = new System.Drawing.Point(243, 92);
+            this.TxtPatientRegSurname.Name = "TxtPatientRegSurname";
+            this.TxtPatientRegSurname.Size = new System.Drawing.Size(100, 20);
+            this.TxtPatientRegSurname.TabIndex = 2;
             // 
             // label4
             // 
@@ -112,13 +112,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Surname:";
             // 
-            // TxtPassword
+            // TxtPatientRegPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(243, 179);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(100, 20);
-            this.TxtPassword.TabIndex = 15;
-            this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPatientRegPassword.Location = new System.Drawing.Point(243, 179);
+            this.TxtPatientRegPassword.Name = "TxtPatientRegPassword";
+            this.TxtPatientRegPassword.Size = new System.Drawing.Size(100, 20);
+            this.TxtPatientRegPassword.TabIndex = 5;
+            this.TxtPatientRegPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -130,13 +130,12 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Password:";
             // 
-            // TxtName
+            // TxtPatientRegName
             // 
-            this.TxtName.Location = new System.Drawing.Point(243, 63);
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(100, 20);
-            this.TxtName.TabIndex = 17;
-            this.TxtName.UseSystemPasswordChar = true;
+            this.TxtPatientRegName.Location = new System.Drawing.Point(243, 63);
+            this.TxtPatientRegName.Name = "TxtPatientRegName";
+            this.TxtPatientRegName.Size = new System.Drawing.Size(100, 20);
+            this.TxtPatientRegName.TabIndex = 1;
             // 
             // label6
             // 
@@ -148,13 +147,13 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Name:";
             // 
-            // MTxtPhone
+            // MTxtPatientRegPhone
             // 
-            this.MTxtPhone.Location = new System.Drawing.Point(243, 150);
-            this.MTxtPhone.Mask = "(999) 000-0000";
-            this.MTxtPhone.Name = "MTxtPhone";
-            this.MTxtPhone.Size = new System.Drawing.Size(100, 20);
-            this.MTxtPhone.TabIndex = 18;
+            this.MTxtPatientRegPhone.Location = new System.Drawing.Point(243, 150);
+            this.MTxtPatientRegPhone.Mask = "(999) 000-0000";
+            this.MTxtPatientRegPhone.Name = "MTxtPatientRegPhone";
+            this.MTxtPatientRegPhone.Size = new System.Drawing.Size(100, 20);
+            this.MTxtPatientRegPhone.TabIndex = 4;
             // 
             // label7
             // 
@@ -166,55 +165,59 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Sex:";
             // 
-            // CbxSex
+            // CbxPatientRegSex
             // 
-            this.CbxSex.FormattingEnabled = true;
-            this.CbxSex.Location = new System.Drawing.Point(243, 209);
-            this.CbxSex.Name = "CbxSex";
-            this.CbxSex.Size = new System.Drawing.Size(100, 21);
-            this.CbxSex.TabIndex = 20;
+            this.CbxPatientRegSex.FormattingEnabled = true;
+            this.CbxPatientRegSex.Items.AddRange(new object[] {
+            "Man",
+            "Woman"});
+            this.CbxPatientRegSex.Location = new System.Drawing.Point(243, 209);
+            this.CbxPatientRegSex.Name = "CbxPatientRegSex";
+            this.CbxPatientRegSex.Size = new System.Drawing.Size(100, 21);
+            this.CbxPatientRegSex.TabIndex = 6;
             // 
             // FormPatientRegister
             // 
+            this.AcceptButton = this.BtRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(369, 301);
-            this.Controls.Add(this.CbxSex);
+            this.Controls.Add(this.CbxPatientRegSex);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.MTxtPhone);
-            this.Controls.Add(this.TxtName);
+            this.Controls.Add(this.MTxtPatientRegPhone);
+            this.Controls.Add(this.TxtPatientRegName);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtPatientRegPassword);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TxtSurname);
+            this.Controls.Add(this.TxtPatientRegSurname);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.MTxtIdentityNumber);
+            this.Controls.Add(this.MTxtPatientRegIdentityNumber);
             this.Controls.Add(this.BtRegister);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FormPatientRegister";
-            this.Text = "FormPatientRegister";
+            this.Text = "Patient Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox MTxtIdentityNumber;
+        private System.Windows.Forms.MaskedTextBox MTxtPatientRegIdentityNumber;
         private System.Windows.Forms.Button BtRegister;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtSurname;
+        private System.Windows.Forms.TextBox TxtPatientRegSurname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtPatientRegPassword;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.TextBox TxtPatientRegName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox MTxtPhone;
+        private System.Windows.Forms.MaskedTextBox MTxtPatientRegPhone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox CbxSex;
+        private System.Windows.Forms.ComboBox CbxPatientRegSex;
     }
 }
