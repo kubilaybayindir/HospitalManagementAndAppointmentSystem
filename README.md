@@ -1,1 +1,1 @@
-# HospitalManagementAndBookingSystem
+# HospitalManagementAndAppointmentSystem
