@@ -62,6 +62,7 @@
             this.BtPatientLogin.TabIndex = 10;
             this.BtPatientLogin.Text = "Login";
             this.BtPatientLogin.UseVisualStyleBackColor = true;
+            this.BtPatientLogin.Click += new System.EventHandler(this.BtPatientLogin_Click);
             // 
             // label3
             // 
@@ -97,13 +98,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 301);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(446, 301);
             this.Controls.Add(this.TbxPatientPassword);
             this.Controls.Add(this.MTbxPatientIdNumber);
             this.Controls.Add(this.BtPatientLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormSecretaryLogin";
             this.Text = "FormSecretaryLogin";
             this.ResumeLayout(false);

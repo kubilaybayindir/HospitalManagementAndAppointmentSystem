@@ -140,10 +140,10 @@
     <Compile Include="Patient\FormPatientRegister.Designer.cs">
       <DependentUpon>FormPatientRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FormSecretaryLogin.cs">
+    <Compile Include="Secretary\FormSecretaryLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\FormSecretaryLogin.Designer.cs">
+    <Compile Include="Secretary\FormSecretaryLogin.Designer.cs">
       <DependentUpon>FormSecretaryLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -185,7 +185,7 @@
     <EmbeddedResource Include="Login\FormLogins.resx">
       <DependentUpon>FormLogins.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FormSecretaryLogin.resx">
+    <EmbeddedResource Include="Secretary\FormSecretaryLogin.resx">
       <DependentUpon>FormSecretaryLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FormPatientDetails.resx">

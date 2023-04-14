@@ -94,9 +94,10 @@ namespace HospitalManagementAndAppointmentSystem.Patient
 
         private void LLblEditDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormPatientEditDetails formEditDetails = new FormPatientEditDetails();
+            FormPatientEditDetails formPatientEditDetails = new FormPatientEditDetails();
             //formEditDetails.
-            formEditDetails.Show();
+            formPatientEditDetails.patientIdentityNumber = LblPatientIdentityNumber.Text;
+            formPatientEditDetails.Show();
         }
     }
 }

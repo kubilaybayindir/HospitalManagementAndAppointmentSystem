@@ -99,7 +99,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.Location = new System.Drawing.Point(364, 191);
+            this.linkLabel1.Location = new System.Drawing.Point(358, 191);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(77, 24);
             this.linkLabel1.TabIndex = 4;
@@ -112,8 +112,9 @@
             this.AcceptButton = this.BtPatientLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(540, 301);
+            this.ClientSize = new System.Drawing.Size(446, 301);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.TbxPatientLgnPassword);
             this.Controls.Add(this.MTbxPatientLgnIdNumber);
@@ -121,6 +122,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPatientLogin";
             this.Text = "Patient Login";
             this.Load += new System.EventHandler(this.FormPatientLogin_Load);

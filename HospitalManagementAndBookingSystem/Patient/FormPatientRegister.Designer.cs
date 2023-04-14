@@ -181,6 +181,7 @@
             this.AcceptButton = this.BtRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(369, 301);
             this.Controls.Add(this.CbxPatientRegSex);
@@ -197,6 +198,8 @@
             this.Controls.Add(this.BtRegister);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPatientRegister";
             this.Text = "Patient Register";
             this.ResumeLayout(false);

@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MTxtIdentityNumber = new System.Windows.Forms.MaskedTextBox();
-            this.BtUpdate = new System.Windows.Forms.Button();
+            this.BtPatientUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -47,16 +47,19 @@
             // CbxSex
             // 
             this.CbxSex.FormattingEnabled = true;
-            this.CbxSex.Location = new System.Drawing.Point(229, 211);
+            this.CbxSex.Items.AddRange(new object[] {
+            "Man",
+            "Woman"});
+            this.CbxSex.Location = new System.Drawing.Point(244, 207);
             this.CbxSex.Name = "CbxSex";
             this.CbxSex.Size = new System.Drawing.Size(100, 21);
-            this.CbxSex.TabIndex = 34;
+            this.CbxSex.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(143, 207);
+            this.label7.Location = new System.Drawing.Point(158, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 26);
             this.label7.TabIndex = 33;
@@ -64,25 +67,24 @@
             // 
             // MTxtPhone
             // 
-            this.MTxtPhone.Location = new System.Drawing.Point(229, 152);
+            this.MTxtPhone.Location = new System.Drawing.Point(244, 148);
             this.MTxtPhone.Mask = "(999) 000-0000";
             this.MTxtPhone.Name = "MTxtPhone";
             this.MTxtPhone.Size = new System.Drawing.Size(100, 21);
-            this.MTxtPhone.TabIndex = 32;
+            this.MTxtPhone.TabIndex = 4;
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(229, 65);
+            this.TxtName.Location = new System.Drawing.Point(244, 61);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 21);
-            this.TxtName.TabIndex = 31;
-            this.TxtName.UseSystemPasswordChar = true;
+            this.TxtName.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(122, 62);
+            this.label6.Location = new System.Drawing.Point(137, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 26);
             this.label6.TabIndex = 30;
@@ -90,17 +92,17 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(229, 181);
+            this.TxtPassword.Location = new System.Drawing.Point(244, 177);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(100, 21);
-            this.TxtPassword.TabIndex = 29;
+            this.TxtPassword.TabIndex = 5;
             this.TxtPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(85, 178);
+            this.label5.Location = new System.Drawing.Point(100, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 26);
             this.label5.TabIndex = 28;
@@ -108,17 +110,16 @@
             // 
             // TxtSurname
             // 
-            this.TxtSurname.Location = new System.Drawing.Point(229, 94);
+            this.TxtSurname.Location = new System.Drawing.Point(244, 90);
             this.TxtSurname.Name = "TxtSurname";
             this.TxtSurname.Size = new System.Drawing.Size(100, 21);
-            this.TxtSurname.TabIndex = 27;
-            this.TxtSurname.UseSystemPasswordChar = true;
+            this.TxtSurname.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(92, 91);
+            this.label4.Location = new System.Drawing.Point(107, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 26);
             this.label4.TabIndex = 26;
@@ -136,29 +137,30 @@
             // 
             // MTxtIdentityNumber
             // 
-            this.MTxtIdentityNumber.Location = new System.Drawing.Point(229, 123);
+            this.MTxtIdentityNumber.Location = new System.Drawing.Point(244, 119);
             this.MTxtIdentityNumber.Mask = "00000000000";
             this.MTxtIdentityNumber.Name = "MTxtIdentityNumber";
             this.MTxtIdentityNumber.Size = new System.Drawing.Size(100, 21);
-            this.MTxtIdentityNumber.TabIndex = 24;
+            this.MTxtIdentityNumber.TabIndex = 3;
             this.MTxtIdentityNumber.ValidatingType = typeof(int);
             // 
-            // BtUpdate
+            // BtPatientUpdate
             // 
-            this.BtUpdate.BackColor = System.Drawing.Color.Khaki;
-            this.BtUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtUpdate.Location = new System.Drawing.Point(229, 254);
-            this.BtUpdate.Name = "BtUpdate";
-            this.BtUpdate.Size = new System.Drawing.Size(100, 35);
-            this.BtUpdate.TabIndex = 23;
-            this.BtUpdate.Text = "Update";
-            this.BtUpdate.UseVisualStyleBackColor = false;
+            this.BtPatientUpdate.BackColor = System.Drawing.Color.Khaki;
+            this.BtPatientUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtPatientUpdate.Location = new System.Drawing.Point(244, 250);
+            this.BtPatientUpdate.Name = "BtPatientUpdate";
+            this.BtPatientUpdate.Size = new System.Drawing.Size(100, 35);
+            this.BtPatientUpdate.TabIndex = 23;
+            this.BtPatientUpdate.Text = "Update";
+            this.BtPatientUpdate.UseVisualStyleBackColor = false;
+            this.BtPatientUpdate.Click += new System.EventHandler(this.BtPatientUpdate_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(118, 149);
+            this.label3.Location = new System.Drawing.Point(133, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 26);
             this.label3.TabIndex = 22;
@@ -168,7 +170,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(27, 120);
+            this.label2.Location = new System.Drawing.Point(42, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 26);
             this.label2.TabIndex = 21;
@@ -178,6 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(369, 301);
             this.Controls.Add(this.CbxSex);
@@ -191,12 +194,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MTxtIdentityNumber);
-            this.Controls.Add(this.BtUpdate);
+            this.Controls.Add(this.BtPatientUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPatientEditDetails";
             this.Text = "Patient Edit Details";
+            this.Load += new System.EventHandler(this.FormPatientEditDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +221,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox MTxtIdentityNumber;
-        private System.Windows.Forms.Button BtUpdate;
+        private System.Windows.Forms.Button BtPatientUpdate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
     }
