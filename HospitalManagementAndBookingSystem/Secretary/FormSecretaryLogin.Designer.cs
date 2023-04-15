@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbxPatientPassword = new System.Windows.Forms.TextBox();
-            this.MTbxPatientIdNumber = new System.Windows.Forms.MaskedTextBox();
+            this.TbxSecPassword = new System.Windows.Forms.TextBox();
+            this.MTbxSecIdNumber = new System.Windows.Forms.MaskedTextBox();
             this.BtPatientLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TbxPatientPassword
+            // TbxSecPassword
             // 
-            this.TbxPatientPassword.Location = new System.Drawing.Point(261, 166);
-            this.TbxPatientPassword.Name = "TbxPatientPassword";
-            this.TbxPatientPassword.Size = new System.Drawing.Size(100, 20);
-            this.TbxPatientPassword.TabIndex = 12;
-            this.TbxPatientPassword.UseSystemPasswordChar = true;
+            this.TbxSecPassword.Location = new System.Drawing.Point(261, 166);
+            this.TbxSecPassword.Name = "TbxSecPassword";
+            this.TbxSecPassword.Size = new System.Drawing.Size(100, 20);
+            this.TbxSecPassword.TabIndex = 12;
+            this.TbxSecPassword.Text = "123123";
+            this.TbxSecPassword.UseSystemPasswordChar = true;
             // 
-            // MTbxPatientIdNumber
+            // MTbxSecIdNumber
             // 
-            this.MTbxPatientIdNumber.Location = new System.Drawing.Point(261, 122);
-            this.MTbxPatientIdNumber.Mask = "00000000000";
-            this.MTbxPatientIdNumber.Name = "MTbxPatientIdNumber";
-            this.MTbxPatientIdNumber.Size = new System.Drawing.Size(100, 20);
-            this.MTbxPatientIdNumber.TabIndex = 11;
-            this.MTbxPatientIdNumber.ValidatingType = typeof(int);
+            this.MTbxSecIdNumber.Location = new System.Drawing.Point(261, 122);
+            this.MTbxSecIdNumber.Mask = "00000000000";
+            this.MTbxSecIdNumber.Name = "MTbxSecIdNumber";
+            this.MTbxSecIdNumber.Size = new System.Drawing.Size(100, 20);
+            this.MTbxSecIdNumber.TabIndex = 11;
+            this.MTbxSecIdNumber.Text = "98765432112";
+            this.MTbxSecIdNumber.ValidatingType = typeof(int);
             // 
             // BtPatientLogin
             // 
@@ -96,12 +98,13 @@
             // 
             // FormSecretaryLogin
             // 
+            this.AcceptButton = this.BtPatientLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(446, 301);
-            this.Controls.Add(this.TbxPatientPassword);
-            this.Controls.Add(this.MTbxPatientIdNumber);
+            this.Controls.Add(this.TbxSecPassword);
+            this.Controls.Add(this.MTbxSecIdNumber);
             this.Controls.Add(this.BtPatientLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -117,8 +120,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TbxPatientPassword;
-        private System.Windows.Forms.MaskedTextBox MTbxPatientIdNumber;
+        private System.Windows.Forms.TextBox TbxSecPassword;
+        private System.Windows.Forms.MaskedTextBox MTbxSecIdNumber;
         private System.Windows.Forms.Button BtPatientLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

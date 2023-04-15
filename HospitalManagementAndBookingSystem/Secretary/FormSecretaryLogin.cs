@@ -21,13 +21,17 @@ namespace HospitalManagementAndAppointmentSystem
         SQLConnectionCls sqLConnectionCls = new SQLConnectionCls();
         private void BtPatientLogin_Click(object sender, EventArgs e)
         {
+
+            //Get Name-Surname 
+
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Secretary WHERE IdentityNumber=@p1 AND Password=@p2", sqLConnectionCls.ConnectDb());
-            sqlCommand.Parameters.AddWithValue("@p1", MTbxPatientIdNumber.Text);
-            sqlCommand.Parameters.AddWithValue("@p2", TbxPatientPassword.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", MTbxSecIdNumber.Text);
+            sqlCommand.Parameters.AddWithValue("@p2", TbxSecPassword.Text);
             SqlDataReader sqlDataReader=sqlCommand.ExecuteReader();
             if (sqlDataReader.Read())
             {
                 FormSecretaryDetails formSecretaryDetails = new FormSecretaryDetails();
+                formSecretaryDetails.SecretaryIdentityNumber = MTbxSecIdNumber.Text;
                 formSecretaryDetails.Show();
                 this.Hide();
             }

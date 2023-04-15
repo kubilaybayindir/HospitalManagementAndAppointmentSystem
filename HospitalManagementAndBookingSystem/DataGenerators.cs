@@ -63,7 +63,7 @@ namespace HospitalManagementAndAppointmentSystem
             for (int i = 0; i < 10; i++)
             {
                 SqlCommand sqlCommand = new SqlCommand("INSERT INTO Secretary(NameSurname,IdentityNumber,Password) VALUES (@p1,@p2,@p3)", sqlConnectionCls.ConnectDb());
-                sqlCommand.Parameters.AddWithValue("@p1", NameData.GetFirstName() + NameData.GetSurname());
+                sqlCommand.Parameters.AddWithValue("@p1", NameData.GetFirstName() + " " + NameData.GetSurname());
                 sqlCommand.Parameters.AddWithValue("@p2", ((double)NumberData.GetNumber(100000, 315000) * (double)NumberData.GetNumber(100000, 315000)).ToString());
                 sqlCommand.Parameters.AddWithValue("@p3", "123123");
                 sqlCommand.ExecuteNonQuery();

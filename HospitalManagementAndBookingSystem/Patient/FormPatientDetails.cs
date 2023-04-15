@@ -43,11 +43,12 @@ namespace HospitalManagementAndAppointmentSystem.Patient
 
             //Appointment History 
             DataTable dataTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter=new SqlDataAdapter("SELECT * FROM Appointment WHERE PatinetIdentityNumber=" + IdentityNumber,sqlConnectionCls.ConnectDb());
+            SqlDataAdapter sqlDataAdapter=new SqlDataAdapter("SELECT * FROM Appointment WHERE PatientIdentityNumber=" + IdentityNumber,sqlConnectionCls.ConnectDb());
             sqlDataAdapter.Fill(dataTable);
             DgvAppointmentHistory.DataSource=dataTable;
 
             //Get Departments
+            CbxPatientDepartment.Items.Clear();
             SqlCommand sqlCommandDep = new SqlCommand("SELECT DepartmentName FROM Department", sqlConnectionCls.ConnectDb());
             SqlDataReader sqlDataReaderDep = sqlCommandDep.ExecuteReader();
             while (sqlDataReaderDep.Read())
@@ -69,7 +70,7 @@ namespace HospitalManagementAndAppointmentSystem.Patient
             sqlCommand.Parameters.AddWithValue("@p1",CbxPatientDepartment.Text);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
+            CbxPatientDoctor.Items.Clear();
             while (sqlDataReader.Read())
             {
                 CbxPatientDoctor.Items.Add(sqlDataReader[0]+ " " + sqlDataReader[1]);   
