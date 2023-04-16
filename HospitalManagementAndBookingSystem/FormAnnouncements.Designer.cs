@@ -1,6 +1,6 @@
 ﻿namespace HospitalManagementAndAppointmentSystem
 {
-    partial class FormAnnouncements
+    partial class FormAnnouncementList
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // FormAnnouncements
+            // FormAnnouncementList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 494);
             this.Font = new System.Drawing.Font("Corbel", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "FormAnnouncements";
-            this.Text = "FormAnnouncements";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "FormAnnouncementList";
+            this.Text = " Announcements";
             this.ResumeLayout(false);
 
         }

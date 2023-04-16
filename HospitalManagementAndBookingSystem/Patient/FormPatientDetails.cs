@@ -61,7 +61,7 @@ namespace HospitalManagementAndAppointmentSystem.Patient
 
         public void LblGeneratePatient_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DataGenerators.DepartmentGenerator();
+            DataGenerators.DoctorGenerator();
         }
 
         private void CbxPatientDepartment_SelectedIndexChanged(object sender, EventArgs e)

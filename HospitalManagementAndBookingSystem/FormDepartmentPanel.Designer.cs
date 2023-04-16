@@ -30,13 +30,13 @@
         {
             this.BtDepartmentUpdatePnl = new System.Windows.Forms.Button();
             this.BtDepartmentDeletePnl = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgVDepartments = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtDepartmentIdPnl = new System.Windows.Forms.TextBox();
             this.TxtDepartmentNamePnl = new System.Windows.Forms.TextBox();
             this.BtDepartmentInsertPnl = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgVDepartments)).BeginInit();
             this.SuspendLayout();
             // 
             // BtDepartmentUpdatePnl
@@ -49,6 +49,7 @@
             this.BtDepartmentUpdatePnl.TabIndex = 79;
             this.BtDepartmentUpdatePnl.Text = "Update";
             this.BtDepartmentUpdatePnl.UseVisualStyleBackColor = false;
+            this.BtDepartmentUpdatePnl.Click += new System.EventHandler(this.BtDepartmentUpdatePnl_Click);
             // 
             // BtDepartmentDeletePnl
             // 
@@ -60,14 +61,18 @@
             this.BtDepartmentDeletePnl.TabIndex = 78;
             this.BtDepartmentDeletePnl.Text = "Delete";
             this.BtDepartmentDeletePnl.UseVisualStyleBackColor = false;
+            this.BtDepartmentDeletePnl.Click += new System.EventHandler(this.BtDepartmentDeletePnl_Click);
             // 
-            // dataGridView1
+            // DgVDepartments
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(291, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(336, 166);
-            this.dataGridView1.TabIndex = 77;
+            this.DgVDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgVDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgVDepartments.Location = new System.Drawing.Point(291, 19);
+            this.DgVDepartments.Name = "DgVDepartments";
+            this.DgVDepartments.ReadOnly = true;
+            this.DgVDepartments.Size = new System.Drawing.Size(336, 166);
+            this.DgVDepartments.TabIndex = 77;
+            this.DgVDepartments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgVDepartments_CellClick);
             // 
             // label7
             // 
@@ -83,17 +88,16 @@
             // 
             this.TxtDepartmentIdPnl.Location = new System.Drawing.Point(185, 19);
             this.TxtDepartmentIdPnl.Name = "TxtDepartmentIdPnl";
+            this.TxtDepartmentIdPnl.ReadOnly = true;
             this.TxtDepartmentIdPnl.Size = new System.Drawing.Size(100, 27);
-            this.TxtDepartmentIdPnl.TabIndex = 72;
-            this.TxtDepartmentIdPnl.UseSystemPasswordChar = true;
+            this.TxtDepartmentIdPnl.TabIndex = 1;
             // 
             // TxtDepartmentNamePnl
             // 
             this.TxtDepartmentNamePnl.Location = new System.Drawing.Point(185, 55);
             this.TxtDepartmentNamePnl.Name = "TxtDepartmentNamePnl";
             this.TxtDepartmentNamePnl.Size = new System.Drawing.Size(100, 27);
-            this.TxtDepartmentNamePnl.TabIndex = 70;
-            this.TxtDepartmentNamePnl.UseSystemPasswordChar = true;
+            this.TxtDepartmentNamePnl.TabIndex = 2;
             // 
             // BtDepartmentInsertPnl
             // 
@@ -105,6 +109,7 @@
             this.BtDepartmentInsertPnl.TabIndex = 67;
             this.BtDepartmentInsertPnl.Text = "Insert";
             this.BtDepartmentInsertPnl.UseVisualStyleBackColor = false;
+            this.BtDepartmentInsertPnl.Click += new System.EventHandler(this.BtDepartmentInsertPnl_Click);
             // 
             // label1
             // 
@@ -124,16 +129,17 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtDepartmentUpdatePnl);
             this.Controls.Add(this.BtDepartmentDeletePnl);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgVDepartments);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtDepartmentIdPnl);
             this.Controls.Add(this.TxtDepartmentNamePnl);
             this.Controls.Add(this.BtDepartmentInsertPnl);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDepartmentPanel";
             this.Text = "FormDepartmentPanel";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDepartmentPanel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgVDepartments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +149,7 @@
 
         private System.Windows.Forms.Button BtDepartmentUpdatePnl;
         private System.Windows.Forms.Button BtDepartmentDeletePnl;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgVDepartments;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtDepartmentIdPnl;
         private System.Windows.Forms.TextBox TxtDepartmentNamePnl;

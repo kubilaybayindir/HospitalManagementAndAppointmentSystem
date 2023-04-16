@@ -92,6 +92,7 @@
             this.BtCreateAnnouncement.TabIndex = 7;
             this.BtCreateAnnouncement.Text = "Create Announcement";
             this.BtCreateAnnouncement.UseVisualStyleBackColor = true;
+            this.BtCreateAnnouncement.Click += new System.EventHandler(this.BtCreateAnnouncement_Click);
             // 
             // RTbxSecAnnouncements
             // 
@@ -400,6 +401,7 @@
             this.BtAnnouncementList.TabIndex = 23;
             this.BtAnnouncementList.Text = "Announcement List";
             this.BtAnnouncementList.UseVisualStyleBackColor = true;
+            this.BtAnnouncementList.Click += new System.EventHandler(this.BtAnnouncementList_Click);
             // 
             // BtDepartmentPanel
             // 
@@ -410,6 +412,7 @@
             this.BtDepartmentPanel.TabIndex = 22;
             this.BtDepartmentPanel.Text = "Department Panel";
             this.BtDepartmentPanel.UseVisualStyleBackColor = true;
+            this.BtDepartmentPanel.Click += new System.EventHandler(this.BtDepartmentPanel_Click);
             // 
             // BtDoctorPanel
             // 
@@ -420,6 +423,7 @@
             this.BtDoctorPanel.TabIndex = 21;
             this.BtDoctorPanel.Text = "Doctor Panel";
             this.BtDoctorPanel.UseVisualStyleBackColor = true;
+            this.BtDoctorPanel.Click += new System.EventHandler(this.BtDoctorPanel_Click);
             // 
             // FormSecretaryDetails
             // 

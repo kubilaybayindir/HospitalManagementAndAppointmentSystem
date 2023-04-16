@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HospitalManagementAndAppointmentSystem
 {
-    public partial class FormAnnouncements : Form
+    public partial class FormAnnouncementList : Form
     {
-        public FormAnnouncements()
+        public FormAnnouncementList()
         {
             InitializeComponent();
         }

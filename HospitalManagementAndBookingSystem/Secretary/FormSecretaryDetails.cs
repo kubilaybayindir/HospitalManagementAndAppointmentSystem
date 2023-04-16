@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalManagementAndAppointmentSystem.Doctor;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,7 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
             //Import Doctor Datas To DataGridView
 
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT (Name + ' ' +Surname) AS 'Doctors' FROM Doctor", sqlConnectionCls.ConnectDb());
+            SqlDataAdapter da = new SqlDataAdapter("SELECT (Name + ' ' + Surname) AS 'Doctors' FROM Doctor", sqlConnectionCls.ConnectDb());
             da.Fill(dt);
             DgvDoctors.DataSource = dt;
 
@@ -56,7 +57,6 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
                 CbxDepartment.Items.Add( sqlCbxDepDataReader[0].ToString());
             }
         }
-
         private void BtAppointmentSave_Click(object sender, EventArgs e)
         {
             SqlCommand sqlCommand = new SqlCommand("INSERT INTO Appointment (Date,Hour,Department,Doctor) VALUES(@r1,@r2,@r3,@r4)", sqlConnectionCls.ConnectDb());
@@ -68,7 +68,7 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
             sqlCommand.ExecuteNonQuery();
             sqlConnectionCls.ConnectDb().Close();
 
-            MessageBox.Show("Appointment Was Added Successfully", "Done");
+            MessageBox.Show("Appointment Was Added Successfully", "Appointment Done");
         }
 
         private void CbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,6 +84,39 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
                 CbxDoctor.Items.Add(sqlCbxDocDataReader[0].ToString());
             }
             sqlConnectionCls.ConnectDb().Close();
+        }
+        private void BtCreateAnnouncement_Click(object sender, EventArgs e)
+        {
+            if (RTbxSecAnnouncements.Text != "")
+            {
+                SqlCommand sqlCommand = new SqlCommand("INSERT INTO  Announcement (Context) VALUES (@p1)", sqlConnectionCls.ConnectDb());
+                sqlCommand.Parameters.AddWithValue("@p1", RTbxSecAnnouncements.Text);
+                sqlCommand.ExecuteNonQuery();
+                sqlConnectionCls.ConnectDb().Close();
+
+                MessageBox.Show("Announcement Was Added Successfully", "Announcement Done");
+            }
+        }
+
+        private void BtDoctorPanel_Click(object sender, EventArgs e)
+        {
+            FormDoctorPanel formDoctorPanel = new FormDoctorPanel();
+            formDoctorPanel.Show();
+            this.Hide();
+        }
+
+        private void BtDepartmentPanel_Click(object sender, EventArgs e)
+        {
+            FormDepartmentPanel formDepartmentPanel = new FormDepartmentPanel();
+            formDepartmentPanel.Show();
+            this.Hide();
+        }
+
+        private void BtAnnouncementList_Click(object sender, EventArgs e)
+        {
+            FormAnnouncementList formAnnouncementList = new FormAnnouncementList();
+            formAnnouncementList.Show();
+            this.Hide();
         }
     }
 }
