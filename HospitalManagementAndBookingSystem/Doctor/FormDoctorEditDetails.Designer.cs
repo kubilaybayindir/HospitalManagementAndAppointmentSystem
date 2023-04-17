@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoctorEditDetails));
             this.CbxDocDepartment = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtDocName = new System.Windows.Forms.TextBox();
@@ -48,7 +49,7 @@
             this.CbxDocDepartment.Location = new System.Drawing.Point(235, 175);
             this.CbxDocDepartment.Name = "CbxDocDepartment";
             this.CbxDocDepartment.Size = new System.Drawing.Size(100, 21);
-            this.CbxDocDepartment.TabIndex = 48;
+            this.CbxDocDepartment.TabIndex = 4;
             // 
             // label7
             // 
@@ -65,8 +66,7 @@
             this.TxtDocName.Location = new System.Drawing.Point(235, 67);
             this.TxtDocName.Name = "TxtDocName";
             this.TxtDocName.Size = new System.Drawing.Size(100, 20);
-            this.TxtDocName.TabIndex = 45;
-            this.TxtDocName.UseSystemPasswordChar = true;
+            this.TxtDocName.TabIndex = 1;
             // 
             // label6
             // 
@@ -83,8 +83,7 @@
             this.TxtDocSurname.Location = new System.Drawing.Point(235, 103);
             this.TxtDocSurname.Name = "TxtDocSurname";
             this.TxtDocSurname.Size = new System.Drawing.Size(100, 20);
-            this.TxtDocSurname.TabIndex = 41;
-            this.TxtDocSurname.UseSystemPasswordChar = true;
+            this.TxtDocSurname.TabIndex = 2;
             // 
             // label4
             // 
@@ -112,7 +111,7 @@
             this.MTxtDocIdentityNumber.Mask = "00000000000";
             this.MTxtDocIdentityNumber.Name = "MTxtDocIdentityNumber";
             this.MTxtDocIdentityNumber.Size = new System.Drawing.Size(100, 20);
-            this.MTxtDocIdentityNumber.TabIndex = 38;
+            this.MTxtDocIdentityNumber.TabIndex = 3;
             this.MTxtDocIdentityNumber.ValidatingType = typeof(int);
             // 
             // BtDocUpdate
@@ -122,9 +121,10 @@
             this.BtDocUpdate.Location = new System.Drawing.Point(235, 256);
             this.BtDocUpdate.Name = "BtDocUpdate";
             this.BtDocUpdate.Size = new System.Drawing.Size(100, 35);
-            this.BtDocUpdate.TabIndex = 37;
+            this.BtDocUpdate.TabIndex = 6;
             this.BtDocUpdate.Text = "Update";
             this.BtDocUpdate.UseVisualStyleBackColor = false;
+            this.BtDocUpdate.Click += new System.EventHandler(this.BtDocUpdate_Click);
             // 
             // label2
             // 
@@ -141,7 +141,7 @@
             this.TxtDocPassword.Location = new System.Drawing.Point(235, 212);
             this.TxtDocPassword.Name = "TxtDocPassword";
             this.TxtDocPassword.Size = new System.Drawing.Size(100, 20);
-            this.TxtDocPassword.TabIndex = 50;
+            this.TxtDocPassword.TabIndex = 5;
             this.TxtDocPassword.UseSystemPasswordChar = true;
             // 
             // label5
@@ -172,8 +172,10 @@
             this.Controls.Add(this.MTxtDocIdentityNumber);
             this.Controls.Add(this.BtDocUpdate);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDoctorEditDetails";
-            this.Text = "FormDoctorEditDetails";
+            this.Text = " Doctor Edit Details";
+            this.Load += new System.EventHandler(this.FormDoctorEditDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

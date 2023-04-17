@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbxDocPassword = new System.Windows.Forms.TextBox();
-            this.MTbxDocIdNumber = new System.Windows.Forms.MaskedTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoctorLogin));
+            this.TbxDoctorPassword = new System.Windows.Forms.TextBox();
+            this.MTbxDoctorIdNumber = new System.Windows.Forms.MaskedTextBox();
             this.BtDocLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TbxDocPassword
+            // TbxDoctorPassword
             // 
-            this.TbxDocPassword.Location = new System.Drawing.Point(276, 168);
-            this.TbxDocPassword.Name = "TbxDocPassword";
-            this.TbxDocPassword.Size = new System.Drawing.Size(100, 20);
-            this.TbxDocPassword.TabIndex = 12;
-            this.TbxDocPassword.UseSystemPasswordChar = true;
+            this.TbxDoctorPassword.Location = new System.Drawing.Point(276, 168);
+            this.TbxDoctorPassword.Name = "TbxDoctorPassword";
+            this.TbxDoctorPassword.Size = new System.Drawing.Size(100, 20);
+            this.TbxDoctorPassword.TabIndex = 12;
+            this.TbxDoctorPassword.UseSystemPasswordChar = true;
             // 
-            // MTbxDocIdNumber
+            // MTbxDoctorIdNumber
             // 
-            this.MTbxDocIdNumber.Location = new System.Drawing.Point(276, 124);
-            this.MTbxDocIdNumber.Mask = "00000000000";
-            this.MTbxDocIdNumber.Name = "MTbxDocIdNumber";
-            this.MTbxDocIdNumber.Size = new System.Drawing.Size(100, 20);
-            this.MTbxDocIdNumber.TabIndex = 11;
-            this.MTbxDocIdNumber.ValidatingType = typeof(int);
+            this.MTbxDoctorIdNumber.Location = new System.Drawing.Point(276, 124);
+            this.MTbxDoctorIdNumber.Mask = "00000000000";
+            this.MTbxDoctorIdNumber.Name = "MTbxDoctorIdNumber";
+            this.MTbxDoctorIdNumber.Size = new System.Drawing.Size(100, 20);
+            this.MTbxDoctorIdNumber.TabIndex = 11;
+            this.MTbxDoctorIdNumber.ValidatingType = typeof(int);
             // 
             // BtDocLogin
             // 
@@ -62,6 +63,7 @@
             this.BtDocLogin.TabIndex = 10;
             this.BtDocLogin.Text = "Login";
             this.BtDocLogin.UseVisualStyleBackColor = true;
+            this.BtDocLogin.Click += new System.EventHandler(this.BtDocLogin_Click);
             // 
             // label3
             // 
@@ -97,24 +99,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(446, 301);
-            this.Controls.Add(this.TbxDocPassword);
-            this.Controls.Add(this.MTbxDocIdNumber);
+            this.Controls.Add(this.TbxDoctorPassword);
+            this.Controls.Add(this.MTbxDoctorIdNumber);
             this.Controls.Add(this.BtDocLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormDoctorLogin";
-            this.Text = "FormDoctorLogin";
+            this.Text = " Doctor Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TbxDocPassword;
-        private System.Windows.Forms.MaskedTextBox MTbxDocIdNumber;
+        private System.Windows.Forms.TextBox TbxDoctorPassword;
+        private System.Windows.Forms.MaskedTextBox MTbxDoctorIdNumber;
         private System.Windows.Forms.Button BtDocLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

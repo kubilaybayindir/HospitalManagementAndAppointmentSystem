@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoctorPanel));
             this.TxtDocPasswordPnl = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.CbxDocDepartmentPnl = new System.Windows.Forms.ComboBox();
@@ -200,6 +201,7 @@
             this.Controls.Add(this.MTxtDocIdentityNumberPnl);
             this.Controls.Add(this.BtDocInsertPnl);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormDoctorPanel";

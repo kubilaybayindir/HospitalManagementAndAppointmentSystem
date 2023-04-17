@@ -11,20 +11,19 @@ using System.Windows.Forms;
 
 namespace HospitalManagementAndAppointmentSystem
 {
-    public partial class FormAppointmentList : Form
+    public partial class FormAnnouncementList : Form
     {
-        public FormAppointmentList()
+        public FormAnnouncementList()
         {
             InitializeComponent();
         }
         SQLConnectionCls sqlConnectionCls = new SQLConnectionCls();
-        private void FormAppointmentList_Load(object sender, EventArgs e)
+        private void FormAnnouncementList_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Appointment", sqlConnectionCls.ConnectDb());
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Announcement", sqlConnectionCls.ConnectDb());
             sqlDataAdapter.Fill(dt);
-            DgvAppointmentList.DataSource = dt;
-
+            DgvAnnouncementList.DataSource = dt;
         }
     }
 }

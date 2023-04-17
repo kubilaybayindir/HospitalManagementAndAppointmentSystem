@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSecretaryEditDetails));
             this.DgvActiveAppointment = new System.Windows.Forms.DataGridView();
             this.DgvAppointmentHistory = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -251,8 +252,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSecretaryEditDetails";
-            this.Text = "FormSecretaryEditDetails";
+            this.Text = "Secretary Edit Details";
             ((System.ComponentModel.ISupportInitialize)(this.DgvActiveAppointment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAppointmentHistory)).EndInit();
             this.groupBox4.ResumeLayout(false);

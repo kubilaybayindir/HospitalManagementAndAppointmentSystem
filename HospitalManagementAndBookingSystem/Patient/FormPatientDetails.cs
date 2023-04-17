@@ -81,7 +81,7 @@ namespace HospitalManagementAndAppointmentSystem.Patient
         private void CbxPatientDoctor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dataTable   =new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Appointment WHERE Department ='" + CbxPatientDepartment.Text + "'", sqlConnectionCls.ConnectDb());
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Appointment WHERE Department ='" + CbxPatientDepartment.Text + "'" + "AND Doctor='" + CbxPatientDoctor.Text + "'" + "AND State=0", sqlConnectionCls.ConnectDb());
 
             SqlCommand sqlCommand = new SqlCommand("SELECT Name,Surname FROM Doctor WHERE Department = @p1", sqlConnectionCls.ConnectDb());
             sqlCommand.Parameters.AddWithValue("@p1", CbxPatientDepartment.Text);
@@ -89,16 +89,31 @@ namespace HospitalManagementAndAppointmentSystem.Patient
             sqlDataAdapter.Fill(dataTable);
 
             DgvActiveAppointment.DataSource = dataTable;
-
-            //sqlConnectionCls.ConnectDb().Close();
         }
 
         private void LLblEditDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormPatientEditDetails formPatientEditDetails = new FormPatientEditDetails();
-            //formEditDetails.
             formPatientEditDetails.patientIdentityNumber = LblPatientIdentityNumber.Text;
             formPatientEditDetails.Show();
+        }
+
+        private void DgvActiveAppointment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ChosenCell = DgvActiveAppointment.SelectedCells[0].RowIndex;
+            TxtId.Text = DgvActiveAppointment.Rows[ChosenCell].Cells[0].Value.ToString();
+        }
+
+        private void BtMakeAppointment_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand = new SqlCommand("UPDATE Appointment SET State = 1,PatientIdentityNumber = @p1, PatientDisease = @p2 WHERE Id=@p3",sqlConnectionCls.ConnectDb());
+            sqlCommand.Parameters.AddWithValue("@p1",LblPatientIdentityNumber.Text);
+            sqlCommand.Parameters.AddWithValue("@p2", RTbxPatientDisease.Text);
+            sqlCommand.Parameters.AddWithValue("@p3", TxtId.Text);
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnectionCls.ConnectDb().Close();
+            MessageBox.Show("Appointment was Created","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
         }
     }
 }

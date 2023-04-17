@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPatientDetails));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblPatientNameSurname = new System.Windows.Forms.Label();
             this.LblPatientIdentityNumber = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.LblGeneratePatient = new System.Windows.Forms.LinkLabel();
             this.LLblEditDetails = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.BtMakeAppointment = new System.Windows.Forms.Button();
-            this.RTbxDisease = new System.Windows.Forms.RichTextBox();
+            this.RTbxPatientDisease = new System.Windows.Forms.RichTextBox();
             this.CbxPatientDoctor = new System.Windows.Forms.ComboBox();
             this.CbxPatientDepartment = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,9 +50,6 @@
             this.DgvAppointmentHistory = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.DgvActiveAppointment = new System.Windows.Forms.DataGridView();
-            this.LblGeneratePatient = new System.Windows.Forms.LinkLabel();
-            this.TxtId = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,7 +120,7 @@
             this.groupBox2.Controls.Add(this.LLblEditDetails);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.BtMakeAppointment);
-            this.groupBox2.Controls.Add(this.RTbxDisease);
+            this.groupBox2.Controls.Add(this.RTbxPatientDisease);
             this.groupBox2.Controls.Add(this.CbxPatientDoctor);
             this.groupBox2.Controls.Add(this.CbxPatientDepartment);
             this.groupBox2.Controls.Add(this.label3);
@@ -131,6 +132,36 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Appointment Panel";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(90, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Id:";
+            // 
+            // TxtId
+            // 
+            this.TxtId.Enabled = false;
+            this.TxtId.Location = new System.Drawing.Point(140, 31);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(138, 29);
+            this.TxtId.TabIndex = 11;
+            // 
+            // LblGeneratePatient
+            // 
+            this.LblGeneratePatient.AutoSize = true;
+            this.LblGeneratePatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblGeneratePatient.Location = new System.Drawing.Point(7, 192);
+            this.LblGeneratePatient.Name = "LblGeneratePatient";
+            this.LblGeneratePatient.Size = new System.Drawing.Size(116, 17);
+            this.LblGeneratePatient.TabIndex = 10;
+            this.LblGeneratePatient.TabStop = true;
+            this.LblGeneratePatient.Text = "Generate Patient";
+            this.LblGeneratePatient.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblGeneratePatient_LinkClicked);
             // 
             // LLblEditDetails
             // 
@@ -162,14 +193,15 @@
             this.BtMakeAppointment.TabIndex = 7;
             this.BtMakeAppointment.Text = "Make Appointment";
             this.BtMakeAppointment.UseVisualStyleBackColor = true;
+            this.BtMakeAppointment.Click += new System.EventHandler(this.BtMakeAppointment_Click);
             // 
-            // RTbxDisease
+            // RTbxPatientDisease
             // 
-            this.RTbxDisease.Location = new System.Drawing.Point(140, 133);
-            this.RTbxDisease.Name = "RTbxDisease";
-            this.RTbxDisease.Size = new System.Drawing.Size(138, 66);
-            this.RTbxDisease.TabIndex = 6;
-            this.RTbxDisease.Text = "";
+            this.RTbxPatientDisease.Location = new System.Drawing.Point(140, 133);
+            this.RTbxPatientDisease.Name = "RTbxPatientDisease";
+            this.RTbxPatientDisease.Size = new System.Drawing.Size(138, 66);
+            this.RTbxPatientDisease.TabIndex = 6;
+            this.RTbxPatientDisease.Text = "";
             // 
             // CbxPatientDoctor
             // 
@@ -248,48 +280,24 @@
             this.DgvActiveAppointment.Name = "DgvActiveAppointment";
             this.DgvActiveAppointment.Size = new System.Drawing.Size(484, 224);
             this.DgvActiveAppointment.TabIndex = 1;
-            // 
-            // LblGeneratePatient
-            // 
-            this.LblGeneratePatient.AutoSize = true;
-            this.LblGeneratePatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblGeneratePatient.Location = new System.Drawing.Point(7, 192);
-            this.LblGeneratePatient.Name = "LblGeneratePatient";
-            this.LblGeneratePatient.Size = new System.Drawing.Size(116, 17);
-            this.LblGeneratePatient.TabIndex = 10;
-            this.LblGeneratePatient.TabStop = true;
-            this.LblGeneratePatient.Text = "Generate Patient";
-            this.LblGeneratePatient.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblGeneratePatient_LinkClicked);
-            // 
-            // TxtId
-            // 
-            this.TxtId.Location = new System.Drawing.Point(140, 31);
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(138, 29);
-            this.TxtId.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(90, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Id:";
+            this.DgvActiveAppointment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvActiveAppointment_CellClick);
             // 
             // FormPatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPatientDetails";
-            this.Text = "FormPatientDetails";
+            this.Text = " Patient Details";
             this.Load += new System.EventHandler(this.FormPatientDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -312,7 +320,7 @@
         private System.Windows.Forms.LinkLabel LLblEditDetails;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BtMakeAppointment;
-        private System.Windows.Forms.RichTextBox RTbxDisease;
+        private System.Windows.Forms.RichTextBox RTbxPatientDisease;
         private System.Windows.Forms.ComboBox CbxPatientDoctor;
         private System.Windows.Forms.ComboBox CbxPatientDepartment;
         private System.Windows.Forms.Label label3;

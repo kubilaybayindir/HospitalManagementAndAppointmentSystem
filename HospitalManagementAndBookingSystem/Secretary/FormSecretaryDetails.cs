@@ -70,7 +70,6 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
 
             MessageBox.Show("Appointment Was Added Successfully", "Appointment Done");
         }
-
         private void CbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Transfer Doctor Name And Surname Datas To Doctor Combobox
@@ -102,21 +101,24 @@ namespace HospitalManagementAndAppointmentSystem.Secretary
         {
             FormDoctorPanel formDoctorPanel = new FormDoctorPanel();
             formDoctorPanel.Show();
-            this.Hide();
         }
 
         private void BtDepartmentPanel_Click(object sender, EventArgs e)
         {
             FormDepartmentPanel formDepartmentPanel = new FormDepartmentPanel();
             formDepartmentPanel.Show();
-            this.Hide();
+        }
+
+        private void BtAppointmentList_Click(object sender, EventArgs e)
+        {
+            FormAppointmentList formAppointmentList = new FormAppointmentList();
+            formAppointmentList.Show();
         }
 
         private void BtAnnouncementList_Click(object sender, EventArgs e)
         {
             FormAnnouncementList formAnnouncementList = new FormAnnouncementList();
             formAnnouncementList.Show();
-            this.Hide();
         }
     }
 }
